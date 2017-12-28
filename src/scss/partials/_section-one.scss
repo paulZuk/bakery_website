@@ -1,0 +1,159 @@
+.art-section {
+  height: 760px;
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(240,237,234,1) 100%);
+}
+
+.art-section__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .left__header {
+    text-align: center;
+    font-family: 'Alegreya', serif;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    padding-top: 90px;
+  }
+  .left__quote {
+    font-family: 'Alegreya', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    padding-bottom: 40px;
+    color: rgb(164,125,94);
+  }
+  .left__description {
+    width: 70%;
+    font-family: 'Proxima Nova', serif;
+    font-size: 12px;
+    line-height: 22px;
+    padding-bottom: 20px;
+  }
+  .left__chef {
+    font-family: 'Alegreya', serif;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+  .left__chef-intro {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
+    .name {
+      font-family: 'Alegreya', serif;
+      font-size: 24px;
+      border-top: 1px solid rgb(215,212,201);
+      border-bottom: 1px solid rgb(215,212,201);
+      padding: 5px;
+      margin-right: 10px;
+    }
+    .circle-outer {
+      position: relative;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: white;
+
+      .intro-photo {
+        position: absolute;
+        width:100px;
+        height:100px;
+        border-radius: 50%;
+        background-image: url("../../src/img/chef.png");
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-position: -40px -5px;
+      }
+    }
+
+    .surname {
+      font-family: 'Alegreya', serif;
+      font-size: 24px;
+      border-top: 1px solid rgb(215,212,201);
+      border-bottom: 1px solid rgb(215,212,201);
+      padding: 5px;
+      margin-left: 10px;
+    }
+  }
+
+  .left__motto {
+    font-family: "Proxima Nova", serif;
+    font-size: 24px;
+    padding-top: 10px;
+    width: 70%;
+    text-align: center;
+    color: rgb(164,125,94);
+    
+    &::before {
+      content: '\02bb\02bb';
+      display: block;
+      text-align: left;
+      color: rgb(86,83,76);
+      font-size: 30px;
+    }
+
+    &::after {
+      content: '\02bc\02bc';
+      display: block;
+      text-align: right;
+      color: rgb(86,83,76);
+      font-size: 30px;
+    }
+  }
+}
+
+.art-section__right {
+  margin-top: 50px;
+  .right__square {
+    position: relative;
+    height: 250px;
+    margin-bottom: 25px;
+  }
+
+  .right__tasty {
+    position: absolute;
+    opacity: 0.96;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url("../../src/img/tastes_so_good.png");
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+  }
+  .square {
+    width: 100%;
+    height: 100%;
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      height:95%;
+      width: 85%;
+      border: 3px solid white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  .square-one {
+    background-image: url("../../src/img/square_one.png");
+    background-position: center;
+  }
+  .square-two {
+    background-image: url("../../src/img/square_two.png");
+    background-position: center;
+  }
+  .square-three {
+    background-image: url("../../src/img/square_three.png");
+    background-position: center;
+  }
+  .square-four {
+    background-image: url("../../src/img/square_four.png");
+    background-position: center;
+  }
+}
