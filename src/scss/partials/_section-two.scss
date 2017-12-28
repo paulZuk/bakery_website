@@ -43,6 +43,30 @@
       box-shadow: -9px 10px 100px -20px rgba(0,0,0,0.75);
     }
 
+    .description__header {
+      font-family: 'Alegreya', serif;
+      font-size: 40px;
+      text-align: left;
+      padding-top: 50px;
+      padding-left: 50px;
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+    .description__quote {
+      font-family: 'Alegreya', serif;
+      font-size: 14px;
+      color: rgb(164, 125, 94);
+      padding-left: 50px;
+      letter-spacing: 2px;
+    }
+    .description__text {
+      font-family: "Proxima Nova", serif;
+      font-size: 14px;
+      color: rgb(86,83,76);
+      padding: 50px;
+      text-align: justify;
+    }
+
     .description__more {
       position: absolute;
       width: 50px;
@@ -52,6 +76,12 @@
       left: 0;
       transform: translate(-50%, -50%);
       background-color: white;
+
+      .description__btn {
+        width: inherit;
+        height: inherit;
+        background: url("../../src/img/menu.png") no-repeat center;
+      }
     }
   }
 }
