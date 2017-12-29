@@ -55,7 +55,7 @@ gulp.task('reloadBrowser', function (done) {
      server: {
        baseDir: "./"
      },
-     browser: "google chrome"
+     browser: "chrome"
    });
  });
 
