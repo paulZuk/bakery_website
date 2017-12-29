@@ -11,7 +11,7 @@
     position: relative;
     height: 500px;
     background-image: url("../../src/img/pancakes.png");
-    width: 45%;
+    width: 400px;
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
@@ -22,7 +22,7 @@
       position: absolute;
       bottom: 0;
       left: -1%;
-      border-width: 0 35px 35px 0;
+      border-width: 0 40px 35px 0;
       border-color: transparent white;
       border-style: solid ;
     }
@@ -30,8 +30,12 @@
   .carousel__description {
     position: relative;
     height: 500px;
+    width: 500px;
     background-color: white;
-    width: 55%;
+    background-image: url("../../src/img/tasty_bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
 
     .carusel__preparation {
       position: absolute;
@@ -41,6 +45,28 @@
       height: 200px;
       background-color: white;
       box-shadow: -9px 10px 100px -20px rgba(0,0,0,0.75);
+      background-image: url("../../src/img/quote_bg.png");
+      background-position: top left;
+
+      p {
+        text-align: center;
+        color: rgb(164,125,94);
+        padding-top: 15px;
+        margin:0;
+        font-family: 'Alegreya', serif;
+        font-weight: 400;
+      }
+
+      p:first-of-type {
+        font-size: 20px;
+      }
+      
+      .preparation__time {
+        font-size: 100px;
+        padding: 0;
+        line-height: 100px;
+      }
+
     }
 
     .description__header {
@@ -87,6 +113,7 @@
     .description__change {
       width: 100%;
       height: 100px;
+      padding-top: 50px;
 
       .change__prev {
         width: 30px;
@@ -111,16 +138,21 @@
           width: 80px;
           height: 80px;
           border-radius: 50%;
-          background-color: black;
         }
         .item-1 {
-
+          background-image: url("../../src/img/item1.png");
+          background-size: cover;
+          background-position: center;
         }
         .item-2 {
-
+          background-image: url("../../src/img/item2.png");
+          background-size: cover;
+          background-position: center;
         }
         .item-3 {
-
+          background-image: url("../../src/img/item3.png");
+          background-size: cover;
+          background-position: center;
         }
       }
     }
