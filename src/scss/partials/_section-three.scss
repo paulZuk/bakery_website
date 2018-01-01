@@ -56,7 +56,24 @@
     height: 600px;
     background-color: rgb(243,241,232);
     width: 90%;
-    .flyer-border {
+    background-image: url("../../src/img/flyer_bg.png");
+    background-size: contain;
+    background-position: 220px bottom;
+    background-repeat: no-repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
+    &::before {
+      z-index: 9;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: -1%;
+      border-width: 0 53px 42px 0;
+      border-color: transparent white;
+      border-style: solid;
+      box-shadow: 1px 1px 30px 1px rgba(0,0,0,.5);
+    }
+    .flyer__border {
       position: absolute;
       height: 585px;
       width: 97%;
@@ -73,5 +90,28 @@
     background-size: contain;
     background-repeat: no-repeat;
     height: 100px;
+  }
+  h1 {
+    text-align: center;
+    font-family: 'Alegreya', serif;
+    font-weight: 400;
+    font-size: 54px;
+  }
+  p {
+    padding: 20px 40px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    font-family: "Proxima Nova", serif;
+    font-size: 14px;
+    text-align: center;
+  }
+  .flyer__button {
+    padding: 10px;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid rgb(157,155,147);
+    color: rgb(164,125,94);
   }
 }
