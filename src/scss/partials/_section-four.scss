@@ -7,7 +7,7 @@
   background-size: 20%;
   background-position: 230px 10px;
   background-repeat: no-repeat;
-  h1 {
+  h2 {
     padding-top: 100px;
     font-family: 'Alegreya', serif;
     font-weight: 400;
@@ -28,7 +28,7 @@
 .ingredient {
   height: 200px;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 
   [class*="ingredient-circle-"] {
     width: 100px;
@@ -59,5 +59,79 @@
     font-family: "Proxima Nova", serif;
     font-size: 12px;
     text-align: center;
+  }
+}
+.jibarito-photo__container {
+  position: relative;
+  width: 650px;
+  height: 430px;
+  background-image: url("../../src/img/jibarito_photo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-shadow: 2px 5px 30px 1px black;
+
+  .jibarito-photo__button {
+    position: absolute;
+    bottom: -20px;
+    left: -15px;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    border: 1px dashed rgb(223,197,145);
+    text-align: center;
+    padding: 10px;
+    color: rgb(223,197,145);
+  }
+  .jibarito-photo__preparation {
+    position: absolute;
+    width: 150px;
+    height: 500px;
+    right: 5px;
+    top: -30px;
+
+    .preparation__square {
+      height: 166px;
+      margin-bottom: 1px;
+      background-color: white;
+      h3 {
+        text-align: center;
+        font-family: 'Alegreya', serif;
+        font-weight: 400;
+        color: rgb(164,125,94);
+        font-size: 16px;
+        padding-top: 30px;
+        margin:0;
+      }
+      p {
+        text-align: center;
+        font-family: 'Alegreya', serif;
+        font-weight: 400;
+        font-size: 60px;
+        margin:0;
+        line-height: 60px;
+      }
+      p:last-child {
+        font-size: 16px;
+        color: rgb(151,146,133);
+      }
+    }
+    .preparation__square-transparent {
+      background-color: rgba(255,255,255, 0.8);
+    }
+    .preparation__square-solid {
+      background-image: url("../../src/img/ready_in.png");
+      background-position: left;
+      background-size: 140%;
+      p {
+        text-align: center;
+        font-family: 'Alegreya', serif;
+        font-weight: 400;
+        font-size: 90px;
+        color: rgb(223,198,145);
+        margin:0;
+        line-height: 60px;
+      }
+    }
   }
 }
