@@ -53,7 +53,7 @@ gulp.task('reloadBrowser', function (done) {
  gulp.task('browserSync', function(){
    browserSync.init({
      server: {
-       baseDir: "./"
+       baseDir: "./build"
      },
      browser: "default"
    });
@@ -63,5 +63,5 @@ gulp.task('watch',['browserSync','sass','jsbundle'], function(){
   gulp.watch('src/scss/**/*.scss', ['sass']);
   gulp.watch('src/js/*.js',['jsbundle']);
   gulp.watch('build/js/*.js', ['reloadBrowser']);
-  gulp.watch('*.html',['reloadBrowser']);
+  gulp.watch('build/*.html',['reloadBrowser']);
 });

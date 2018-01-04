@@ -1,9 +1,9 @@
 .section-three {
   height: 760px;
-  background-image: url("../../src/img/1.jpg");
+  background-image: url("../img/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: top right;
 }
 
 .breakfast-menu {
@@ -56,7 +56,7 @@
     height: 600px;
     background-color: rgb(243,241,232);
     width: 90%;
-    background-image: url("../../src/img/flyer_bg.png");
+    background-image: url("../img/flyer_bg.png");
     background-size: contain;
     background-position: 220px bottom;
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@
   .logo {
     margin: 50px auto;
     width: 80%;
-    background-image: url("../../src/img/flyer_logo.png");
+    background-image: url("../img/flyer_logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 100px;

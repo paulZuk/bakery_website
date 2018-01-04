@@ -1,5 +1,5 @@
 .section-two {
-  background-image: url(../../src/img/pancakes.jpg);
+  background-image: url(../img/pancakes.jpg);
   background-size: cover;
   background-position: center;
   height: 760px;
@@ -10,7 +10,7 @@
   .carousel__image {
     position: relative;
     height: 500px;
-    background-image: url("../../src/img/pancakes.png");
+    background-image: url("../img/pancakes.png");
     width: 400px;
     background-size: cover;
     background-position: center;
@@ -33,7 +33,7 @@
     height: 500px;
     width: 500px;
     background-color: white;
-    background-image: url("../../src/img/tasty_bg.png");
+    background-image: url("../img/tasty_bg.png");
     background-repeat: no-repeat;
     background-position: bottom right;
 
@@ -46,7 +46,7 @@
       height: 200px;
       background-color: white;
       box-shadow: -9px 10px 100px -20px rgba(0,0,0,0.75);
-      background-image: url("../../src/img/quote_bg.png");
+      background-image: url("../img/quote_bg.png");
       background-position: top left;
 
       p {
@@ -107,7 +107,7 @@
       .description__btn {
         width: inherit;
         height: inherit;
-        background: url("../../src/img/menu.png") no-repeat center;
+        background: url("../img/menu.png") no-repeat center;
       }
     }
 
@@ -141,17 +141,17 @@
           border-radius: 50%;
         }
         .item-1 {
-          background-image: url("../../src/img/item1.png");
+          background-image: url("../img/item1.png");
           background-size: cover;
           background-position: center;
         }
         .item-2 {
-          background-image: url("../../src/img/item2.png");
+          background-image: url("../img/item2.png");
           background-size: cover;
           background-position: center;
         }
         .item-3 {
-          background-image: url("../../src/img/item3.png");
+          background-image: url("../img/item3.png");
           background-size: cover;
           background-position: center;
         }

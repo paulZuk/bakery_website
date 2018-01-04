@@ -3,7 +3,7 @@
   background-color: rgb(243,241,232);
 }
 .jibarito-header {
-  background-image: url("../../src/img/tasty_bg.png");
+  background-image: url("../img/tasty_bg.png");
   background-size: 20%;
   background-position: 230px 10px;
   background-repeat: no-repeat;
@@ -34,18 +34,18 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: red;
+    background-color: white;
     background-position: center;
     background-size: cover;
   }
   .ingredient-circle-1 {
-    background-image: url("../../src/img/circle-1.png");
+    background-image: url("../img/circle-1.png");
   }
   .ingredient-circle-2 {
-    background-image: url("../../src/img/circle-2.png");
+    background-image: url("../img/circle-2.png");
   }
   .ingredient-circle-3 {
-    background-image: url("../../src/img/circle-3.png");
+    background-image: url("../img/circle-3.png");
   }
   h3 {
     padding: 10px 0;
@@ -65,7 +65,7 @@
   position: relative;
   width: 650px;
   height: 430px;
-  background-image: url("../../src/img/jibarito_photo.png");
+  background-image: url("../img/jibarito_photo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -120,7 +120,7 @@
       background-color: rgba(255,255,255, 0.8);
     }
     .preparation__square-solid {
-      background-image: url("../../src/img/ready_in.png");
+      background-image: url("../img/ready_in.png");
       background-position: left;
       background-size: 140%;
       p {

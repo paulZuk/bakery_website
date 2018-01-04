@@ -1,7 +1,7 @@
 .main-header {
   position: relative;
   height: 100vh;
-  background-image: url('../../src/img/header.png');
+  background-image: url('../img/header.png');
   background-size: cover;
   background-position: center;
   &::after {
@@ -21,7 +21,7 @@
     position: absolute;
     width: 100px;
     height: 100px;
-    background-image: url("../../src/img/bread_logo.png");
+    background-image: url("../img/bread_logo.png");
     background-size: cover;
     background-position: center ;
     background-repeat: no-repeat;
@@ -98,17 +98,17 @@
   .twitter {
     width: 16px;
     height: 13px;
-    background-image: url("../../src/img/twitter.png");
+    background-image: url("../img/twitter.png");
   }
   .facebook {
     width: 8px;
     height: 15px;
-    background-image: url("../../src/img/facebook.png");
+    background-image: url("../img/facebook.png");
   }
   .instagram {
     width: 14px;
     height: 16px;
-    background-image: url("../../src/img/instagram.png");
+    background-image: url("../img/instagram.png");
   }
 }
 
