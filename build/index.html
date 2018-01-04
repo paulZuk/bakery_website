@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="lib/jQuery/jquery.min.js"></script>
     <title>Bakery</title>
 </head>
 <body>
@@ -51,19 +52,21 @@
                         </a>
                     </div>
                 </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="main-header__content">
-                        <h1 class="main-header__title">Pastry with love</h1>
-                        <div class="main-header__description">
-                            <p>We're bringing you fresh ingredients every day in ways you can't resist</p>
-                        </div>
-                        <a href="">
-                            <div class="main-header__menu">OUR MENU</div>
-                        </a>
-                    </div>
-                </div>
             </div>
         </nav>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="main-header__content">
+                    <h1 class="main-header__title">Pastry with love</h1>
+                    <div class="main-header__description">
+                        <p>We're bringing you fresh ingredients every day in ways you can't resist</p>
+                    </div>
+                    <a href="">
+                        <div class="main-header__menu-btn">OUR MENU</div>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="main-header__bottom-bar"></div>
     </header>
     <section class="art-section">
@@ -219,7 +222,7 @@
             </div>
         </div>
     </section>
-    <footer class="main-footer">
+    <footer class="main-footer d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <nav class="col-12">
@@ -240,5 +243,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/js.bundle.js"></script>
 </body>
 </html>

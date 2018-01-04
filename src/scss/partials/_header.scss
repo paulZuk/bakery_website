@@ -45,7 +45,9 @@
 }
 
 .main-header__nav {
-  height: 70px;
+  z-index: 10;
+  position: fixed;
+  width: 100%;
   background-color: rgba(86,83,76,.53);
 }
 
@@ -68,6 +70,7 @@
   align-items: center;
   list-style: none;
   height: 70px;
+  transition: height .2s;
 
   .sep {
     color: white;
@@ -147,9 +150,11 @@
     letter-spacing: 2px;
     padding-bottom: 10vh;
   }
-  .main-header__menu {
+  .main-header__menu-btn {
     width: 200px;
     height: 50px;
+    padding: 15px;
+    text-align: center;
     background-color: rgba(86,83,76,.53);
     color: white;
     font-size: 14px;
