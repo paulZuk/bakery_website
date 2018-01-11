@@ -10,26 +10,32 @@
   .carousel__image {
     position: relative;
     height: 500px;
-    background-image: url("../img/pancakes.png");
     width: 400px;
-    background-size: cover;
-    background-position: center;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
+    background-color: transparent;
 
-
-    &::before {
-      content: '';
+    [class*="image-"] {
       position: absolute;
-      bottom: 0;
-      left: -1%;
-      border-width: 0 40px 35px 0;
-      border-color: transparent white;
-      border-style: solid ;
+      height: 100%;
+      width: 100%;
+      opacity: 0.1;
+      background-size: cover;
+      background-position: center;
+      transition: opacity .2s;
+    }
+
+    .image-1 {
+      background-image: url("../img/item1.png");
+    }
+    .image-2 {
+      background-image: url("../img/item2.png");
+    }
+    .image-3 {
+      background-image: url("../img/item3.png");
     }
   }
   .carousel__description {
     position: relative;
+    z-index: 3;
     height: 500px;
     width: 500px;
     background-color: white;
@@ -92,6 +98,7 @@
       color: rgb(86,83,76);
       padding: 50px;
       text-align: justify;
+      margin-bottom: 30px;
     }
 
     .description__more {
@@ -105,6 +112,7 @@
       background-color: white;
 
       .description__btn {
+        z-index: 999;
         width: inherit;
         height: inherit;
         background: url("../img/menu.png") no-repeat center;
@@ -114,28 +122,43 @@
     .description__change {
       width: 100%;
       height: 100px;
-      padding-top: 50px;
+      position: relative;
 
-      .change__prev {
-        width: 30px;
-        height: 30px;
-        text-align: center;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: -5px;
+        left: 50%;
         border-radius: 50%;
-        border: 2px solid black;
+        background-color: black;
+        width: 2px;
+        height: 15px;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
       }
-      .change__next {
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        border-radius: 50%;
-        border: 2px solid black;
+      &::after {
+        top: 105%;
+      }
+
+      .change__container {
+
       }
 
       .change__carousel {
-        width: 70%;
-        height: inherit;
+        list-style: none;
+        position: relative;
+        margin: 0;
+
+        &::after {
+          content: '';
+          display: block;
+          clear: both;
+        }
 
         [class*="item-"] {
+          float:left;
+          margin: 0 10px;
           width: 80px;
           height: 80px;
           border-radius: 50%;
@@ -156,6 +179,24 @@
           background-position: center;
         }
       }
+    }
+    .change__prev {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid black;
+      cursor: pointer;
+      margin:0 10px;
+    }
+    .change__next {
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      border-radius: 50%;
+      border: 2px solid black;
+      cursor: pointer;
+      margin:0 10px;
     }
   }
 }

@@ -1,6 +1,6 @@
 //Header scroll change
 
-function headerScrollChange() {
+headerScrollChange = () => {
     let pos = $(window).scrollTop();
     const headerNavbar = $('.main-header__menu');
     const nav = $('.main-header__nav');
@@ -12,7 +12,7 @@ function headerScrollChange() {
 
     } else if (pos >= 30) {
         headerNavbar.css({
-            height:'90px'
+            height:'85px'
         });
 
         nav.css({
@@ -31,8 +31,8 @@ function headerScrollChange() {
         });
 
     }
-}
+};
 
-$(window).on('scroll', () => {
-    headerScrollChange();
+$(window).on('scroll', function() {
+   headerScrollChange();
 });
