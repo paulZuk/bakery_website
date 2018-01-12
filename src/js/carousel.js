@@ -1,20 +1,21 @@
+//Elements constants
 
 const next = $('.change__next');
 const prev = $('.change__prev');
 const slider = $('.change__container');
 const list = slider.find('ul');
 const photos = list.find('[class*="item-"]');
+const texts = $('.description__text').children();
+const images = $('.carousel__image').children();
+const time = $('.preparation__time').children();
+const headers = $('.description__header').children();
 const photoWidth = $(photos[0]).width();
-let activeSlide = 1;
 
 //Options variables
 
+let activeSlide = 1;
 let margin = 20;
 let slideChangeTime = 3000;
-let fadeOutTime = 50;
-let fadeInTime = 500;
-
-const images = $('.carousel__image').children();
 
 //Setup carousel
 
@@ -39,7 +40,30 @@ list.css({
     left: (-photoWidth - margin)*2
 });
 
+// Images initial state
+
 $(images[0]).css({
+    zIndex:2,
+    opacity:1
+});
+
+//Texts initial state
+
+$(texts[0]).css({
+    zIndex:2,
+    opacity:1
+});
+
+//Time initial state
+
+$(time[0]).css({
+    zIndex:2,
+    opacity:1
+});
+
+//Headers initial state
+
+$(headers[0]).css({
     zIndex:2,
     opacity:1
 });
@@ -57,28 +81,18 @@ let interval = setInterval(function() {
             });
             activeSlide = 0;
 
-            images.css({
-                zIndex:1,
-                opacity: .1
-            });
-            $(images[0]).css({
-                zIndex: 2,
-                opacity: 1
-            })
-            // fadeOutImages(fadeOutTime);
-            // $(images[0]).fadeIn(fadeInTime);
+            showElement(images,activeSlide,'first', .1);
+            showElement(texts, activeSlide, 'first', 0);
+            showElement(time, activeSlide, 'first', 0);
+            showElement(headers, activeSlide, 'first', 0);
+
 
         } else {
-            images.css({
-                zIndex:1,
-                opacity: .1
-            });
-            $(images[activeSlide]).css({
-                zIndex: 2,
-                opacity: 1
-            })
-            // fadeOutImages(fadeOutTime);
-            // $(images[activeSlide]).fadeIn(fadeInTime);
+            showElement(images,activeSlide,'current', .1);
+            showElement(texts,activeSlide,'current', 0);
+            showElement(time, activeSlide, 'current', 0);
+            showElement(headers, activeSlide, 'current', 0);
+
         }
         activeSlide++;
     })
@@ -97,28 +111,17 @@ next.on('click', function() {
             });
             activeSlide = 0;
 
-            images.css({
-                zIndex:1,
-                opacity: .1
-            });
-            $(images[0]).css({
-                zIndex: 2,
-                opacity: 1
-            })
-            // fadeOutImages(fadeOutTime);
-            // $(images[0]).fadeIn(fadeInTime);
+            showElement(images,activeSlide,'first', .1);
+            showElement(texts, activeSlide, 'first', 0);
+            showElement(time, activeSlide, 'first', 0);
+            showElement(headers, activeSlide, 'first', 0);
+
 
         } else {
-            images.css({
-                zIndex:1,
-                opacity: .1
-            });
-            $(images[activeSlide]).css({
-                zIndex: 2,
-                opacity: 1
-            })
-            // fadeOutImages(fadeOutTime);
-            // $(images[activeSlide]).fadeIn(fadeInTime);
+            showElement(images,activeSlide,'current', .1);
+            showElement(texts,activeSlide,'current', 0);
+            showElement(time,activeSlide,'current', 0);
+            showElement(headers,activeSlide,'current', 0);
         }
         activeSlide++;
     });
@@ -140,29 +143,18 @@ prev.on('click', function() {
 
             activeSlide = photos.length;
 
-            images.css({
-                zIndex:1,
-                opacity: .1
-            });
-            $(images[2]).css({
-                zIndex: 2,
-                opacity: 1
-            })
-
-            // fadeOutImages(fadeOutTime);
-            // $(images[2]).fadeIn(fadeInTime);
+            showElement(images,activeSlide,'last', .1);
+            showElement(texts, activeSlide, 'last', 0);
+            showElement(time, activeSlide, 'last', 0);
+            showElement(headers, activeSlide, 'last', 0);
 
         } else {
-            images.css({
-                zIndex:1,
-                opacity: .1
-            });
-            $(images[activeSlide-1]).css({
-                zIndex: 2,
-                opacity: 1
-            })
-            // fadeOutImages(fadeOutTime);
-            // $(images[activeSlide-1]).fadeIn(fadeInTime);
+
+            showElement(images,activeSlide,'currentFromEnd', .1);
+            showElement(texts, activeSlide, 'currentFromEnd', 0);
+            showElement(time, activeSlide, 'currentFromEnd', 0);
+            showElement(headers, activeSlide, 'currentFromEnd', 0);
+
         }
     });
     clearInterval(interval);
@@ -170,5 +162,62 @@ prev.on('click', function() {
 
 function fadeOutImages(time){
     images.fadeOut(time);
+}
+
+function showElement(elements, active ,photoPosition, startOpacity) {
+    switch (photoPosition) {
+        case 'first':
+
+            elements.css({
+                zIndex:1,
+                opacity: startOpacity
+            });
+            $(elements[0]).css({
+                zIndex: 2,
+                opacity: 1
+            });
+            break;
+
+        case 'last':
+
+            elements.css({
+                zIndex:1,
+                opacity: startOpacity
+            });
+            $(elements[elements.length - 1]).css({
+                zIndex: 2,
+                opacity: 1
+            });
+            break;
+
+        case 'current':
+
+            elements.css({
+                zIndex:1,
+                opacity: startOpacity
+            });
+            $(elements[active]).css({
+                zIndex: 2,
+                opacity: 1
+            });
+            break;
+
+        case 'currentFromEnd':
+
+            elements.css({
+                zIndex:1,
+                opacity: startOpacity
+            });
+            $(elements[active - 1]).css({
+                zIndex: 2,
+                opacity: 1
+            });
+            break;
+
+
+        default:
+            return;
+    }
+
 }
 

@@ -69,21 +69,39 @@
       }
       
       .preparation__time {
-        font-size: 100px;
-        padding: 0;
-        line-height: 100px;
+        position: relative;
+        width: 100%;
+        height: 100px;
+        p {
+          top: 50%;
+          left: 50%;
+          transform:translate(-50%,-50%);
+          position: absolute;
+          font-size: 100px;
+          padding: 0;
+          line-height: 100px;
+          opacity: 0;
+          transition: opacity .2s;
+        }
       }
 
     }
 
     .description__header {
-      font-family: 'Alegreya', serif;
-      font-size: 40px;
-      text-align: left;
-      padding-top: 50px;
-      padding-left: 50px;
-      font-weight: 400;
-      letter-spacing: 3px;
+      position: relative;
+      width: 100%;
+      height: 100px;
+      h2 {
+        position: absolute;
+        font-family: 'Alegreya', serif;
+        font-size: 40px;
+        text-align: left;
+        padding-top: 50px;
+        padding-left: 50px;
+        font-weight: 400;
+        letter-spacing: 3px;
+        opacity: 0;
+      }
     }
     .description__quote {
       font-family: 'Alegreya', serif;
@@ -93,12 +111,20 @@
       letter-spacing: 2px;
     }
     .description__text {
-      font-family: "Proxima Nova", serif;
-      font-size: 14px;
-      color: rgb(86,83,76);
-      padding: 50px;
-      text-align: justify;
-      margin-bottom: 30px;
+      position: relative;
+      width: 100%;
+      height: 230px;
+      p {
+        position: absolute;
+        font-family: "Proxima Nova", serif;
+        font-size: 14px;
+        color: rgb(86,83,76);
+        padding: 50px;
+        text-align: justify;
+        margin:0;
+        opacity: 0;
+        transition: opacity .2s;
+      }
     }
 
     .description__more {
