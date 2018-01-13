@@ -10,9 +10,13 @@ const images = $('.carousel__image').children();
 const time = $('.preparation__time').children();
 const headers = $('.description__header').children();
 const photoWidth = $(photos[0]).width();
+const descriptionBtn = $('.description__more');
+const descriptionWrap = $('.carousel__wrap');
+const caruselImage = $('.carousel__image');
 
 //Options variables
 
+let unwraped = 0;
 let activeSlide = 1;
 let margin = 20;
 let slideChangeTime = 3000;
@@ -158,6 +162,29 @@ prev.on('click', function() {
         }
     });
     clearInterval(interval);
+});
+
+descriptionBtn.on('click', function() {
+
+    clearInterval(interval);
+
+    if(unwraped === 0) {
+        descriptionWrap.css({
+            width: '400px'
+        });
+        caruselImage.css({
+            width:0
+        });
+        unwraped = 1
+    } else {
+        descriptionWrap.css({
+            width: '1px'
+        });
+        caruselImage.css({
+            width: '400px'
+        });
+        unwraped = 0
+    }
 });
 
 function fadeOutImages(time){

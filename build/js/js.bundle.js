@@ -11,9 +11,13 @@ var images = $('.carousel__image').children();
 var time = $('.preparation__time').children();
 var headers = $('.description__header').children();
 var photoWidth = $(photos[0]).width();
+var descriptionBtn = $('.description__more');
+var descriptionWrap = $('.carousel__wrap');
+var caruselImage = $('.carousel__image');
 
 //Options variables
 
+var unwraped = 0;
 var activeSlide = 1;
 var margin = 20;
 var slideChangeTime = 3000;
@@ -152,6 +156,29 @@ prev.on('click', function () {
         }
     });
     clearInterval(interval);
+});
+
+descriptionBtn.on('click', function () {
+
+    clearInterval(interval);
+
+    if (unwraped === 0) {
+        descriptionWrap.css({
+            width: '400px'
+        });
+        caruselImage.css({
+            width: 0
+        });
+        unwraped = 1;
+    } else {
+        descriptionWrap.css({
+            width: '1px'
+        });
+        caruselImage.css({
+            width: '400px'
+        });
+        unwraped = 0;
+    }
 });
 
 function fadeOutImages(time) {
