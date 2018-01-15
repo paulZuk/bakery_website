@@ -241,7 +241,7 @@ function showElement(elements, active, photoPosition, startOpacity) {
 }
 //Header scroll change
 
-headerScrollChange = function headerScrollChange() {
+function headerScrollChange() {
     var pos = $(window).scrollTop();
     var headerNavbar = $('.main-header__menu');
     var nav = $('.main-header__nav');
@@ -269,10 +269,12 @@ headerScrollChange = function headerScrollChange() {
             backgroundColor: 'rgba(86,83,76,.53)'
         });
     }
-};
+}
+if (window.matchMedia('(min-width: 992px)').matches) {
 
-$(window).on('scroll', function () {
-    headerScrollChange();
-});
+    $(window).on('scroll', function () {
+        headerScrollChange();
+    });
+}
 });
 //# sourceMappingURL=js.bundle.js.map

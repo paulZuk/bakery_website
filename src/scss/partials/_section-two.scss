@@ -2,7 +2,12 @@
   background-image: url(../img/pancakes.jpg);
   background-size: cover;
   background-position: center;
+  display: none !important;
   height: 760px;
+
+  @include media-breakpoint-up(lg) {
+    display: flex !important;
+  }
 }
 .carousel {
   height: 500px;
@@ -217,7 +222,7 @@
     transition: width .2s;
 
     .description__more {
-      z-index: 999;
+      z-index: 2;
       position: absolute;
       width: 50px;
       height: 50px;

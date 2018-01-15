@@ -1,6 +1,6 @@
 //Header scroll change
 
-headerScrollChange = () => {
+function headerScrollChange() {
     let pos = $(window).scrollTop();
     const headerNavbar = $('.main-header__menu');
     const nav = $('.main-header__nav');
@@ -31,8 +31,11 @@ headerScrollChange = () => {
         });
 
     }
-};
+}
+if (window.matchMedia('(min-width: 992px)').matches) {
 
-$(window).on('scroll', function() {
-   headerScrollChange();
-});
+    $(window).on('scroll', function() {
+        headerScrollChange();
+    });
+}
+

@@ -45,10 +45,15 @@
 }
 
 .main-header__nav {
+  display: none;
   z-index: 10;
   position: fixed;
   width: 100%;
   background-color: rgba(86,83,76,.53);
+
+  @include media-breakpoint-up(lg) {
+    display: block;
+  }
 }
 
 .main-header__logo {

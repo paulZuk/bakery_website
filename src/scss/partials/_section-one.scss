@@ -1,6 +1,8 @@
 .art-section {
-  height: 760px;
   background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(240,237,234,1) 100%);
+  @include media-breakpoint-up(lg) {
+    height: 760px;
+  }
 }
 
 .art-section__left {
@@ -108,7 +110,7 @@
 }
 
 .art-section__right {
-  margin-top: 50px;
+  margin: 50px 0;
   .right__square {
     position: relative;
     height: 250px;

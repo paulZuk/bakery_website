@@ -1,6 +1,9 @@
 .section-four {
-  height: 920px;
   background-color: rgb(243,241,232);
+
+  @include media-breakpoint-up(lg) {
+    height: 920px;
+  }
 }
 .jibarito-header {
   background-image: url("../img/tasty_bg.png");
@@ -22,6 +25,18 @@
     letter-spacing: 2px;
     text-align: center;
     color: rgb(164,125,94);
+  }
+}
+
+.jibarito-ingredients {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  flex-direction: row !important;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: column !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -50,16 +65,34 @@
   h3 {
     padding: 10px 0;
     color: rgb(164,125,94);
-    font-size: 28px;
+    font-size: 18px;
     font-family: 'Alegreya', serif;
     font-weight: 400;
+    width: 100%;
     margin:0;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 22px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 28px;
+    }
   }
   p {
     font-family: "Proxima Nova", serif;
     font-size: 12px;
     text-align: center;
   }
+}
+
+.jibarito-photo {
+  margin-bottom: 50px;
 }
 .jibarito-photo__container {
   position: relative;
