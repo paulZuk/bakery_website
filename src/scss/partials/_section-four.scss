@@ -8,15 +8,19 @@
 .jibarito-header {
   background-image: url("../img/tasty_bg.png");
   background-size: 20%;
-  background-position: 230px 10px;
+  background-position: center;
   background-repeat: no-repeat;
   h2 {
     padding-top: 100px;
     font-family: 'Alegreya', serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 2px;
     text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 40px;
+    }
   }
   p {
     font-family: 'Alegreya', serif;
@@ -46,12 +50,17 @@
   margin-bottom: 20px;
 
   [class*="ingredient-circle-"] {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: white;
     background-position: center;
     background-size: cover;
+
+    @include media-breakpoint-up(sm) {
+      width: 100px;
+      height: 100px;
+    }
   }
   .ingredient-circle-1 {
     background-image: url("../img/circle-1.png");
@@ -65,7 +74,7 @@
   h3 {
     padding: 10px 0;
     color: rgb(164,125,94);
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Alegreya', serif;
     font-weight: 400;
     width: 100%;
@@ -86,6 +95,7 @@
   }
   p {
     font-family: "Proxima Nova", serif;
+    padding: 0 5px;
     font-size: 12px;
     text-align: center;
   }
@@ -93,6 +103,13 @@
 
 .jibarito-photo {
   margin-bottom: 50px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @include media-breakpoint-up(sm) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 .jibarito-photo__container {
   position: relative;
@@ -101,8 +118,12 @@
   background-image: url("../img/jibarito_photo.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 200%;
   box-shadow: 2px 5px 30px 1px black;
+
+  @include media-breakpoint-up(sm) {
+    background-size: contain;
+  }
 
   .jibarito-photo__button {
     position: absolute;

@@ -1,9 +1,13 @@
 .section-three {
-  height: 760px;
   background-image: url("../img/1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
+  background-position: left ;
+
+  @include media-breakpoint-up(lg) {
+    height: 760px;
+    background-position: top right;
+  }
 }
 
 .breakfast-menu {
@@ -84,18 +88,28 @@
     }
   }
   .logo {
-    margin: 50px auto;
+    margin: 20px auto;
     width: 80%;
     background-image: url("../img/flyer_logo.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     height: 100px;
+
+    @include media-breakpoint-up(lg) {
+      margin: 50px auto;
+    }
   }
   h1 {
+    padding: 10px;
     text-align: center;
     font-family: 'Alegreya', serif;
     font-weight: 400;
-    font-size: 54px;
+    font-size: 30px;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 54px;
+    }
   }
   p {
     padding: 20px 40px;

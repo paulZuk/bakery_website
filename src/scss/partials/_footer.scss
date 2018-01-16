@@ -9,12 +9,24 @@
     list-style:none;
     border-top: 1px solid rgb(193,189,185);
     border-bottom: 1px solid rgb(193,189,185);
+    .sep {
+      display: none;
+
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
     .main-footer__link {
+      display: none;
       font-size: 14px;
       font-family: 'Alegreya', serif;
       font-weight: 400;
       color: rgb(86,83,76);
       letter-spacing: 2px;
+      
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
     }
     .main-footer__logo {
       font-family: 'Alegreya', serif;

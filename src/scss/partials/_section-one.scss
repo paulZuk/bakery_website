@@ -27,12 +27,15 @@
     color: rgb(164,125,94);
   }
   .left__description {
-    width: 70%;
     font-family: 'Proxima Nova', serif;
     font-size: 14px;
     line-height: 22px;
-    padding-bottom: 20px;
+    padding: 20px;
     text-align: justify;
+
+    @include media-breakpoint-up(lg) {
+      width: 70%;
+    }
   }
   .left__chef {
     font-family: 'Alegreya', serif;

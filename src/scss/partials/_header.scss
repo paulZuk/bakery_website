@@ -1,9 +1,14 @@
 .main-header {
   position: relative;
-  height: 100vh;
+  height: 130vh;
   background-image: url('../img/header.png');
   background-size: cover;
   background-position: center;
+
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+  }
+
   &::after {
     position: absolute;
     content: '';
@@ -39,9 +44,14 @@
   left: 50%;
   transform: translateX(-50%);
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
   background-color: rgba(86,79,76, .4);
   box-shadow: 0px 0px 80px 40px rgba(86,79,76,.4);
+
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+    width: 100vh;
+  }
 }
 
 .main-header__nav {
@@ -139,21 +149,30 @@
     text-align: center;
     padding-top: 20vh;
     padding-bottom: 10vh;
+    padding-left: 20px;
+    padding-right: 20px;
     color: white;
-    font-size: 65px;
+    font-size: 35px;
     font-family: 'Montserrat', serif;
     font-weight: 400;
     letter-spacing: 2px;
+    @include media-breakpoint-up(lg) {
+      font-size: 65px;
+    }
   }
   .main-header__description {
     line-height: 22px;
-    width: 40vw;
     text-align: center;
     color: white;
     font-family: 'Montserrat', serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 2px;
-    padding-bottom: 10vh;
+    padding: 0 20px 10vh 20px;
+
+    @include  media-breakpoint-up(lg) {
+      font-size: 16px;
+      width: 40vw;
+    }
   }
   .main-header__menu-btn {
     width: 200px;
