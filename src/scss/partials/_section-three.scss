@@ -64,15 +64,15 @@
     background-size: contain;
     background-position: 220px bottom;
     background-repeat: no-repeat;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0% 93%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0% 560px);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%, 0% 560px);
     &::before {
       z-index: 9;
       content: '';
       position: absolute;
       bottom: 0;
-      left: -1%;
-      border-width: 0 53px 42px 0;
+      left: 0;
+      border-width: 0 40px 40px 0;
       border-color: transparent white;
       border-style: solid;
       box-shadow: 1px 1px 30px 1px rgba(0,0,0,.5);
